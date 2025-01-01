@@ -1,4 +1,5 @@
-assert_settlement = @(B, L, E, v, F, expected_settlement) assert(round(poulos_davis(B, L, E, v, F)) == expected_settlement, "calculated settlement is not equal to what is expected!")
+settlement_func = settlement('poulos_davis')
+assert_settlement = @(B, L, E, v, F, expected_settlement) assert(round(settlement_func(B, L, E, v, F)) == expected_settlement, "calculated settlement is not equal to what is expected!")
 
 % Dry Sand
 % data is from wang and Kulhawy 2008

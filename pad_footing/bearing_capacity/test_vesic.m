@@ -1,5 +1,6 @@
+func = bearing_capacity('vesic')
 FS = @(Qult, F) Qult / F;
-assert_FS = @(B, L, D, phi, gama, F, expected_FS) assert(round(FS(vesic(B, L, D, phi, gama), F) * 10) / 10 == expected_FS, "first example of vesic bearing capacity")
+assert_FS = @(B, L, D, phi, gama, F, expected_FS) assert(round(FS(func(B, L, D, phi, gama), F) * 10) / 10 == expected_FS, "first example of vesic bearing capacity")
 
 % Dry Sand
 % data is from wang and Kulhawy 2008
